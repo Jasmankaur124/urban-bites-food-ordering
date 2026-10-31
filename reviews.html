@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews - Foodies Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="order.html">Order</a>
+    <a href="reviews.html" class="active">Reviews</a>
+    <a href="cart.html">Cart 🛒</a>
+  </nav>
+
+  <!-- Leave a Review Section -->
+  <section class="reviews-section">
+    <h1>Leave a Review 📝</h1>
+    <p class="subtitle">We’d love to hear your feedback!</p>
+
+    <div class="review-box">
+      <form class="review-form">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="rating">Rating:</label>
+        <select id="rating" required>
+          <option value="">Choose a rating</option>
+          <option value="5">⭐️⭐️⭐️⭐️⭐️ (Excellent)</option>
+          <option value="4">⭐️⭐️⭐️⭐️ (Good)</option>
+          <option value="3">⭐️⭐️⭐️ (Average)</option>
+          <option value="2">⭐️⭐️ (Poor)</option>
+          <option value="1">⭐️ (Very Bad)</option>
+        </select>
+
+        <label for="feedback">Your Feedback:</label>
+        <textarea id="feedback" rows="4" placeholder="Write your review..." required></textarea>
+
+        <button type="submit">Submit Review</button>
+      </form>
+    </div>
+
+    <!-- Customer Reviews -->
+    <h2 class="review-heading">Customer Reviews 🥗</h2>
+    <p class="subtitle">See what our happy customers say!</p>
+
+    <div class="review-list">
+      <div class="review">
+        <p class="quote">“Best pizza in town! Super quick delivery.”</p>
+        <p class="author">– Aman Singh</p>
+      </div>
+      <div class="review">
+        <p class="quote">“Loved the desserts. The brownie is amazing!”</p>
+        <p class="author">– Priya Sharma</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    © 2025 Foodies Hub. All rights reserved.
+  </footer>
+
+  <script>
+    document.querySelector(".review-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // prevent page reload
+
+      const name = document.getElementById("name").value.trim();
+      const rating = document.getElementById("rating").value;
+      const feedback = document.getElementById("feedback").value.trim();
+
+      if (name && rating && feedback) {
+        alert(`Thank you, ${name}! 🥰\nYour ${rating}-star review has been submitted.\nFeedback: "${feedback}"`);
+        this.reset(); // clear form fields
+      } else {
+        alert("Please fill all fields before submitting!");
+      }
+    });
+  </script>
+</body>
+</html>

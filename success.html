@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Confirmed - Urban Bites</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="cart.html">Cart 🛒</a>
+</nav>
+
+<section class="success-container">
+  <h1>🎉 Order Confirmed!</h1>
+
+  <p>Your order has been placed successfully.</p>
+
+  <div class="order-box">
+    <p><strong>Order ID:</strong> <span id="orderId"></span></p>
+    <p><strong>Estimated Delivery:</strong> 30-40 mins 🚀</p>
+  </div>
+
+  <a href="menu.html" class="cta-button">Order More 🍔</a>
+</section>
+
+<script>
+  const id = "UB" + Math.floor(Math.random() * 100000);
+  document.getElementById("orderId").innerText = id;
+</script>
+</body>
+</html>

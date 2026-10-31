@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Foodies Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="order.html">Order</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="cart.html">Cart 🛒</a>
+    </nav>
+    <h1>Our Menu </h1>
+    <p class="subtitle">Check out our delicious dishes!🍕</p>
+  </header>
+
+  <main>
+    <section class="menu-list">
+      <h2>Pizza Selection</h2>
+
+<ul>
+  <li>
+    <img src="images/pizza1.jpg">
+    <div>
+      <h3>Margherita Pizza</h3>
+      <p>Classic delight with fresh basil and mozzarella.</p>
+      <span class="price">₹299</span>
+      <button onclick="addToCart('Margherita Pizza', 299)">Add to Cart 🛒</button>
+    </div>
+  </li>
+
+  <li>
+    <img src="images/pizza2.jpg">
+    <div>
+      <h3>Farmhouse Pizza</h3>
+      <p>Loaded with fresh veggies and mozzarella.</p>
+      <span class="price">₹349</span>
+      <button onclick="addToCart('Farmhouse Pizza', 349)">Add to Cart 🛒</button>
+    </div>
+  </li>
+
+  <li>
+    <img src="images/pizza3.jpg">
+    <div>
+      <h3>Peppy Paneer Pizza</h3>
+      <p>Spicy paneer chunks with capsicum and onion.</p>
+      <span class="price">₹399</span>
+      <button onclick="addToCart('Peppy Paneer Pizza', 399)">Add to Cart 🛒</button>
+    </div>
+  </li>
+</ul>
+
+      <h2>Beverages</h2>
+      <ul>
+        <li>
+          <img src="images/shake1.jpg" alt="Chocolate Shake">
+          <div>
+            <h3>Chocolate Shake</h3>
+            <p>Rich chocolate shake topped with cream.</p>
+            <span class="price">₹119</span>
+          <button onclick="addToCart('Chocolate Shake', 119)">Add to Cart 🛒</button>
+
+          </div>
+        </li>
+        <li>
+          <img src="images/shake2.jpg" alt="Strawberry Shake">
+          <div>
+            <h3>Strawberry Shake</h3>
+            <p>Fresh strawberries blended with ice cream.</p>
+            <span class="price">₹129</span>
+            <button onclick="addToCart('Strawberry Shake', 129)">Add to Cart 🛒</button> 
+          </div>
+        </li>
+      </ul>
+
+      <h2>Pasta</h2>
+      <ul>
+        <li>
+          <img src="images/pasta1.jpg" alt="Alfredo White Sauce Pasta">
+          <div>
+            <h3>Alfredo White Sauce Pasta</h3>
+            <p>Creamy white sauce with penne pasta.</p>
+            <span class="price">₹249</span>
+          <button onclick="addToCart('White Sauce Pasta', 249)">Add to Cart 🛒</button>
+          </div>
+        </li>
+        <li>
+          <img src="images/pasta2.jpg" alt="Red Sauce Pasta">
+          <div>
+            <h3>Red Sauce Pasta</h3>
+            <p>Spicy tomato sauce and veggies.</p>
+            <span class="price">₹239</span>
+          <button onclick="addToCart('Red Sauce Pasta', 239)">Add to Cart 🛒</button>
+          </div>
+        </li>
+      </ul>
+
+      <h2>Desserts</h2>
+      <ul>
+        <li>
+          <img src="images/dessert1.jpg" alt="Brownie with Ice Cream">
+          <div>
+            <h3>Brownie with Ice Cream</h3>
+            <p>Warm brownie topped with vanilla ice cream.</p>
+            <span class="price">₹149</span>
+          <button onclick="addToCart('Brownie', 149)">Add to Cart 🛒</button>
+
+          </div>
+        </li>
+        <li>
+          <img src="images/dessert2.jpg" alt="Ras Malai">
+          <div>
+            <h3>Ras Malai</h3>
+            <p>Soft cottage cheese patties in creamy milk.</p>
+            <span class="price">₹99</span>
+            <button onclick="addToCart('Ras Malai', 99)">Add to Cart 🛒</button>  
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <a href="order.html" class="cta-button">Order Now</a>
+  </main>
+  <footer>
+    <p>&copy; 2025 Foodies Hub. All rights reserved.</p>
+  </footer>
+  
+  <!-- CHAT BUTTON -->
+<div class="chat-toggle" id="chatBtn">💬</div>
+
+<!-- CHATBOX -->
+<div class="chatbot-container" id="chatbot">
+
+  <div class="chat-header">
+    <span>Urban Bites AI Assistant 🍕</span>
+    <button id="closeChat">✖</button>
+  </div>
+
+  <div class="chat-body" id="chatBody">
+    <div class="bot-msg">Hey 👋</div>
+    <div class="bot-msg">Tumhara mood kya hai? 😋</div>
+
+    <div class="chat-options">
+      <button onclick="selectOption('sweet')">🍰 Sweet</button>
+      <button onclick="selectOption('spicy')">🌶 Spicy</button>
+      <button onclick="selectOption('drink')">🥤 Drink</button>
+    </div>
+  </div>
+
+  <div class="chat-footer">
+    <input type="text" id="chatInput" placeholder="Type something...">
+    <button type="button" onclick="sendMessage()">Send</button>
+
+  </div>
+
+</div>
+
+<script src="frontend.js" defer></script>
+
+<script>
+  if (localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
+
+</body>
+</html>
+
+

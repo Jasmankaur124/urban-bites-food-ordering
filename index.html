@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URBAN BITES</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="reviews.html">Review</a>
+    <a href="order.html">Order</a>
+    <a href="cart.html">Cart 🛒</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>🍽️ <strong>URBAN BITES</strong></h2>
+    <p>Delicious food delivered fresh and fast!</p>
+    <a href="menu.html" class="cta-button">Explore Menu</a>
+  </section>
+
+  <!-- About Section -->
+  <section class="menu-list">
+    <h2>Why Choose Us? 💖</h2>
+    <ul>
+      <li>
+        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png" alt="Fresh Ingredients">
+        <div>
+          <h3>Fresh Ingredients</h3>
+          <p>We use only the freshest and finest ingredients for every dish we prepare.</p>
+        </div>
+      </li>
+      <li>
+        <img src="https://cdn-icons-png.flaticon.com/512/415/415682.png" alt="Fast Delivery">
+        <div>
+          <h3>Super Fast Delivery</h3>
+          <p>Get your favorite meals delivered hot and fresh in under 30 minutes!</p>
+        </div>
+      </li>
+      <li>
+        <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="Customer Service">
+        <div>
+          <h3>Top-Rated Service</h3>
+          <p>We care about your happiness! Our friendly team ensures top-notch customer satisfaction.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Call-to-Action Section -->
+  <section class="hero">
+    <h2>🥗 Hungry Already?</h2>
+    <p>Order now and enjoy fresh food at your doorstep!</p>
+    <a href="order.html" class="cta-button">Place Your Order</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 URBAN BITES. All Rights Reserved.
+  </footer>
+
+  <script>
+  if (localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
+
+</body>
+
+</html>

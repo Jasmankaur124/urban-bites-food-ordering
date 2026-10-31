@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order - Foodies Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="order.html">Order</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="cart.html">Cart 🛒</a>
+  </nav>
+  <h1>Place Your Order</h1>
+  <p class="subtitle">Fill out the form below to enjoy your meal!🍟</p>
+</header>
+
+<main>
+  <section class="order-form">
+
+    <form id="orderForm">
+      <label for="food">Select Food Item:</label>
+      <select id="food" required>
+        <option value="">Choose an item</option>
+
+        <optgroup label="Pizzas">
+          <option>Margherita Pizza</option>
+          <option>Farmhouse Pizza</option>
+          <option>Peppy Paneer Pizza</option>
+        </optgroup>
+
+        <optgroup label="Beverages">
+          <option>Chocolate Shake</option>
+          <option>Strawberry Shake</option>
+        </optgroup>
+
+        <optgroup label="Pastas">
+          <option>Alfredo White Sauce Pasta</option>
+          <option>Red Sauce Pasta</option>
+        </optgroup>
+
+        <optgroup label="Desserts">
+          <option>Ras Malai</option>
+          <option>Brownie with Ice Cream</option>
+        </optgroup>
+      </select>
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" min="1" value="1" required>
+
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="address">Delivery Address:</label>
+      <textarea id="address" placeholder="Enter your address" required></textarea>
+
+      <button type="submit">Place Order</button>
+    </form>
+
+    <!-- ✅ Loader yaha hona chahiye -->
+    <div id="loader"></div>
+
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Foodies Hub. All rights reserved.</p>
+</footer>
+
+<!-- ✅ JS -->
+<script>
+  const form = document.getElementById("orderForm");
+  const loader = document.getElementById("loader");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const food = document.getElementById("food").value;
+    const quantity = document.getElementById("quantity").value;
+    const name = document.getElementById("name").value;
+    const address = document.getElementById("address").value;
+
+    if (food && quantity && name && address) {
+
+      // 🔄 Show loader
+      loader.style.display = "block";
+
+      setTimeout(() => {
+        loader.style.display = "none";
+
+        alert(`Thank you, ${name}! 🍕
+Your order for ${quantity} x ${food} has been placed.
+Delivery to: ${address}`);
+
+        form.reset();
+      }, 2000);
+
+    } else {
+      alert("Please fill all fields!");
+    }
+  });
+</script>
+<div id="orderModal" class="modal">
+  <div class="modal-content">
+    <h2>🎉 Order Confirmed!</h2>
+    <p id="orderText"></p>
+    <button onclick="closeModal()">OK</button>
+  </div>
+</div>
+</body>
+</html>
