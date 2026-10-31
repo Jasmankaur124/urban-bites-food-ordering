@@ -27,7 +27,7 @@ weather-forecast-app/
 ```
 
 ## Author
-**Akshay Baliyan**: MCA, Chandigarh University
+**Jasman Kaur**: MCA, Chandigarh University
 
 ## License
 This project is open source and available under the [MIT License](LICENSE).
